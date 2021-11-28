@@ -15,14 +15,16 @@ let operations = ["+", "-", "*", "/", "=", "√"];
 
 if(number) {
 	number.forEach(element => {
-		document.getElementById('btn_' + element).addEventListener('click', function () {
-			if (String(element) !== 'pi') {
-				inputWindow.value += String(element);
-			} else {
-				inputWindow.value += Math.PI;
-			}
-			history.value += String(element);
-		});
+		if(element) {
+			document.getElementById('btn_' + element).addEventListener('click', function () {
+				if (String(element) !== 'pi') {
+					inputWindow.value += String(element);
+				} else {
+					inputWindow.value += Math.PI;
+				}
+				history.value += String(element);
+			});
+		}
 	});
 }
 operations.forEach(element => {
