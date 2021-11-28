@@ -13,7 +13,7 @@ document.getElementById('btn_clr').addEventListener('click', function () {
 let number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "pi"];
 let operations = ["+", "-", "*", "/", "=", "√"];
 
-number.forEach((element) => {
+number.forEach(element => {
   document.getElementById('btn_' + element).addEventListener('click', function () {
   	if (String(element) !== 'pi'){
   		inputWindow.value += String(element);
@@ -25,7 +25,7 @@ number.forEach((element) => {
 });
 });
 
-operations.forEach((element) => {
+operations.forEach(element => {
 	document.getElementById('btn_' + element).addEventListener('click', function () {
 		 if (String(element) !== '=' && String(element) !== '√' && String(element) !== '-') {
 			lastOperand = parseFloat(inputWindow.value);
